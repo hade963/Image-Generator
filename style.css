@@ -55,6 +55,12 @@ section .container .holder h2 {
   font-weight: bold;
 }
 
+@media screen and (max-width: 767px) { 
+  section .container .holder h2 { 
+    text-align: center;
+  }
+}
+
 section .container .holder .styles { 
   margin-top: 30px;
 }
