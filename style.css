@@ -1,0 +1,160 @@
+:root { 
+  --secondary-color: #23509c;
+  --main-color: #d2d6d2;
+  --text-color: #5b8bdf;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: var(--main-color);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header { 
+  padding: 1rem;
+}
+@media screen and (max-width: 767px ) { 
+  header { 
+    display: flex;
+    align-items: center;
+    padding: 1rem .5rem;
+    justify-content: center;
+  }
+}
+
+section .container { 
+  padding-top: 4rem;
+  display: flex;
+  padding-inline: 1rem;
+  margin-inline: auto;
+  width: 750px;
+  gap: 4rem;
+}
+
+@media screen and (max-width: 767px) { 
+  section .container { 
+    width: 100%;
+    padding-top: 2rem;
+    gap: 2rem;
+    flex-direction: column;
+}
+}
+section .holder { 
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+
+section .container .holder h2 { 
+  margin-bottom: 10px;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+section .container .holder .styles { 
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) { 
+  section .container .image-container { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+}
+
+section .image {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section .container h2 { 
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 767px) { 
+  section .container .controles { 
+    display: flex;
+    justify-content: center;
+  }
+}
+section .container ul { 
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) { 
+  section .container ul {
+    justify-content: center;
+    max-width: 500px;
+}
+}
+section .container ul li {
+  text-transform: capitalize;
+  padding: .3rem 1rem;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  font-weight: bold;
+  transition: .5s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+
+section .container ul li:hover,
+section .container ul li.active { 
+  color: white;
+  background-color: var(--secondary-color);
+}
+
+section .container .image { 
+  position: relative;
+  background-image: url("./alpaca/backgrounds/darkblue70.png");
+  min-width: 300px;
+  min-height: 300px;
+}
+
+section .container .image img { 
+  max-width: 100%;
+  position: absolute;
+}
+
+section .container .controles {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.neck-img,
+.hair-img,
+.nose-img { 
+  z-index: 1;
+} 
+.mouth-img,
+.eyes-img,
+.accessories-img {
+  z-index: 2;
+}
+
+section .container  .controles button {
+  padding: .5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: bold;
+}
+
+section .container  .controles button:hover {
+  background-color: #eee;
+}
